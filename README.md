@@ -46,7 +46,6 @@ For number 4 the solution is :
     fclose(file);
     }
 
-
-#Kesusahan :
+# Kesusahan :
 1. Kurang mengertinya terhadap modul fuse
 2. terdapat error ketika mengcompile sehingga terdapat error dan blue screen 

@@ -26,39 +26,24 @@ For number 4 the solution is :
     void filelog(char *level, char *command, const char *desc[], int descLen)
 
     {
-
     FILE *file = fopen(log, "a");
-
     time_t t;
-
     struct tm *tmp;
-
     char timeString[100];
 
 
     time(&t);
-
     tmp = localtime(&t);
-
     strftime(timeString, sizeof(timeString), "%d%m%y-%H:%M:%S", tmp);
 
 
     fprintf(file, "%s::%s:%s", level, timeString, command);
-
     for (int i = 0; i < descLen; i++)
-
     {
-
         fprintf(file, "::%s", desc[i]);
-
     }
-
-    
-
     fprintf(file, "\n");
-
     fclose(file);
-
     }
 
 
